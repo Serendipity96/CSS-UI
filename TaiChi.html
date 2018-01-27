@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <title>TaiChi</title>
     <style>
+        @keyframes spin {
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
         .taiChi{
             background:#fff;
             width:48px;
@@ -13,7 +21,10 @@
             border-width:2px 50px 2px 2px;
             border-radius:100%;
             position:relative;
-
+            animation-duration: 3s;
+            animation-name: spin;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
         }
 
         .taiChi:before{
